@@ -1,0 +1,18 @@
+@use 'variables';
+
+.NavBar{
+    
+    ul {
+        list-style-type : none;
+        display: flex;
+        gap: 50px;
+        
+        
+        a {
+            text-decoration: none;
+            font-weight: 500;
+            font-size: variables.$base-font-size;
+            color: black;
+        }
+    }
+}

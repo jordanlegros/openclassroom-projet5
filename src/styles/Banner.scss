@@ -1,0 +1,33 @@
+@use 'variables';
+
+
+
+.Banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    height: 225px;
+    border-radius: 20px;
+    
+
+    .Banner__Image{
+        width: 100%;
+        object-fit: cover;
+        filter: brightness(40%);
+    }
+
+    .Banner__Text{
+        position: absolute;
+        z-index: 2;
+        font-weight: 700;
+        font-size: variables.$Big-font-size;
+        color: white;
+        text-shadow: 
+        -1px -1px 0 #000,  
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+    }
+}
