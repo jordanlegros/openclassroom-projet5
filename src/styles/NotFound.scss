@@ -1,0 +1,36 @@
+@use 'variables';
+
+
+.NotFound{
+    width: 100%;
+    padding: 50px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    justify-content: center;
+    align-items: center;
+
+    .NotFound__title{
+        color: variables.$primary-color;
+        font-size: variables.$Giant-font-size;
+        margin: 0;
+    }
+
+    .NotFound__text{
+        color: variables.$primary-color;
+        font-size: variables.$Big-font-size;
+        margin: 0;
+        font-weight: 500;
+    }
+
+    .NotFound__link{
+        color: black;
+        font-size: variables.$base-font-size;
+        font-weight: 500;
+    }
+
+    .NotFound__link Link{
+        text-decoration: none;
+    }
+}

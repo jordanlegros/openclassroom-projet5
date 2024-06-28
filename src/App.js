@@ -6,6 +6,13 @@ import Footer from "./components/Footer"
 import AppRouter from "./components/AppRouter";
 
 
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fas } from '@fortawesome/free-solid-svg-icons'; // Importation des icônes solid
+import { far } from '@fortawesome/free-regular-svg-icons'; // Importation des icônes regular
+import { fab } from '@fortawesome/free-brands-svg-icons'; // Importation des icônes de marques
+
+library.add(fas, far, fab);
+
 function App() {
   return (
     <Router>
