@@ -10,4 +10,26 @@
     grid-auto-rows: minmax(100px, auto);
     justify-items: center;
     padding: 50px 0px;
+    
+
+    button{
+        background: none;
+        border: none;
+    }
+
+    @media (max-width: 1024px) {
+       
+    }
+
+    @media (max-width: 768px) {
+        button{
+            width: 100%;
+            padding: 0 30px;
+        }
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+    }
 }

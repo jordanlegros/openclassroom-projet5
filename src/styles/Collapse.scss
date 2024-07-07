@@ -9,6 +9,7 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        align-items: center;
         padding: 10px 30px;
         background-color: variables.$primary-color;
         border-radius: 5px;  
@@ -33,9 +34,22 @@
             }
         }
 
-    }
+        @media (max-width: 1024px) {
+            .Collapse__HeadBar--title{
+                font-size: 4vw;
+            }
 
-   
+            .Collapse__HeadBar--button{
+                width: 7vw;
+                height: 7vw;
+            }
+        }
+    
+        @media (max-width: 768px) {
+            
+        }
+
+    }
 
     .content {
         padding: 20px;
@@ -53,7 +67,9 @@
     .content-show {
         transition: height ease 0.5s;
     }
-    
+
+
+   
 
     
 }

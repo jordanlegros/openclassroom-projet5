@@ -1,6 +1,6 @@
 @use 'variables';
 
-.Card{
+.Card {
     width: 340px;
     height: 340px;
     background: linear-gradient(180deg, #ff6060, #c74b4b);
@@ -17,16 +17,42 @@
         flex-direction: column;
         justify-content: end;
         padding: 40px 20px;
-        
 
-
-        .Card__Title{
+        .Card__Title {
             width: 300px;
             color: white;
             font-weight: 700;
             font-size: white;
-            
         }
-      }
-    
+    }
+
+    @media (max-width: 1024px) {
+        width: 300px;
+        height: 300px;
+
+        .Card__Content {
+            padding: 30px 15px;
+
+            .Card__Title {
+                width: 280px;
+                font-size: 18px; // Ajustez la taille de la police si nécessaire
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        width: 100%;
+        height: auto;
+        aspect-ratio : 1 / 1;
+
+        .Card__Content {
+            padding: 20px 10px;
+
+            .Card__Title {
+                width: 100%;
+                text-align: start;
+                font-size: 3vw; // Ajustez la taille de la police si nécessaire
+            }
+        }
+    }
 }

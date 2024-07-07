@@ -1,8 +1,6 @@
 @use 'variables';
 
-
-
-.Banner{
+.Banner {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,24 +8,37 @@
     width: 100%;
     height: 225px;
     border-radius: 20px;
-    
+    position: relative; // Ajouté pour positionner correctement le texte
 
-    .Banner__Image{
+    .Banner__Image {
         width: 100%;
         object-fit: cover;
         filter: brightness(40%);
     }
 
-    .Banner__Text{
+    .Banner__Text {
         position: absolute;
         z-index: 2;
         font-weight: 700;
         font-size: variables.$Big-font-size;
         color: white;
         text-shadow: 
-        -1px -1px 0 #000,  
-        1px -1px 0 #000,
-        -1px 1px 0 #000,
-        1px 1px 0 #000;
+            -1px -1px 0 #000,  
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000;
+    }
+
+    @media (max-width: 1024px) {
+        height: 40vw;
+        .Banner__Text {
+            font-size: 5vw;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .Banner__Text {
+            font-size: 4vw;
+        }
     }
 }

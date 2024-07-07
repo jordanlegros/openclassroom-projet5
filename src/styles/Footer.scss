@@ -15,4 +15,20 @@
     .Footer__mentions{
         color: white;
     }
+
+    @media (max-width: 1024px) {
+        height: 30vw;
+       .Footer__Logo{
+        width: 20vw;
+        height: 7vw;
+       }
+
+       .Footer__mentions{
+        font-size: 3vw;
+       }
+    }
+
+    @media (max-width: 768px) {
+        
+    }
 }

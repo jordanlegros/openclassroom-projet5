@@ -1,0 +1,17 @@
+@use "variables";
+
+.Tag{
+    width: 115px;
+    height: 25px;
+    background-color: variables.$primary-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    
+
+    .Tag__text{
+        color: white;
+        font-size: variables.$small-font-size;
+    }
+}

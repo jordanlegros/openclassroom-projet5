@@ -14,5 +14,17 @@
             font-size: variables.$base-font-size;
             color: black;
         }
+
+        @media (max-width: 1024px) {
+       
+        }
+    
+        @media (max-width: 768px) {
+            gap: 10vw;
+            a{
+                font-size:3vw;
+            }
+
+        }
     }
 }

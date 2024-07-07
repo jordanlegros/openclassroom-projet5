@@ -1,0 +1,94 @@
+@use 'variables';
+
+.CardPage{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+
+    .CardPage__Info{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .CardPage__TitleAndTag{
+            .CardPage__title{
+                font-size: variables.$title-font-size;
+                font-weight: 500;
+                color: variables.$primary-color;
+            }
+        
+            .CardPage__location{
+                font-size: variables.$base-font-size;
+                font-weight: 500;
+            }
+    
+            .CardPage__TagContainer{
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+            }
+
+            
+        }
+
+        .CardPage__PPAndRating{
+                display: flex;
+                gap: 20px;
+                flex-direction: column;
+                justify-content: center;
+                align-items: end;
+
+                .CardPage__PP{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 20px;
+
+                    .CardPage__PP--PP{
+                        width: 70px;
+                        height: 70px;
+                        border-radius: 35px;
+                    }
+                }
+        }
+
+
+    }
+
+    .CardPage__details{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 75px;
+    }
+    
+    @media (max-width: 1024px) {
+       .CardPage__Info{
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+
+            .CardPage__PPAndRating{
+                width: 100%;
+                flex-direction: row-reverse;
+                justify-content: space-between;
+                align-items: center;
+            }
+       }
+
+       .CardPage__details{
+        flex-direction: column;
+        padding: 40px 0;
+        gap: 30px;
+       }
+
+
+    }
+
+    @media (max-width: 768px) {
+        
+    }
+    
+}

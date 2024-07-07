@@ -33,4 +33,27 @@
     .NotFound__link Link{
         text-decoration: none;
     }
+
+
+    @media (max-width: 1024px) {
+        padding: 10px;
+        gap: 50px;
+
+        .NotFound__title{
+            font-size: 20vw;
+        }
+
+        .NotFound__text{
+            font-size: 5vw;
+            text-align: center;
+        }
+
+        .NotFound__link{
+            font-size: 4vw;
+        }
+    }
+
+    @media (max-width: 768px) {
+        
+    }
 }

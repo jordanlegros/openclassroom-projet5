@@ -1,0 +1,33 @@
+@use 'variables';
+
+
+.Rating{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+    .Rating__fullStar{
+        color: variables.$primary-color;
+    }
+
+    .Rating__emptyStar{
+        color: variables.$fourth-color;
+    }
+
+    .Rating__emptyStar,.Rating__fullStar{
+        height: 36px;
+        width: 36px;
+    }
+
+    @media (max-width: 1024px) {
+       gap: 5px;
+       .Rating__emptyStar,.Rating__fullStar{
+        height: 5vw;
+        width: 5vw;
+       }
+    }
+
+    @media (max-width: 768px) {
+        
+    }
+}

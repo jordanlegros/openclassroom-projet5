@@ -7,16 +7,17 @@ import data from "../assets/backend/donnees.json";
 const CardsContainer = () => {
   const navigate = useNavigate();
 
-  const handleCardClick = (id) => {
+  const handleCardClick = (data) => {
     console.log("click");
-    navigate(`/card/${id}`);
+    navigate(`/card/${data.id}`, { state: { data } });
+
   };
 
 
   return (
     <div className="CardsContainer">
       {data.map((location) => (
-        <button key={location.id} onClick={() => handleCardClick(location.id)}>
+        <button key={location.id} onClick={() => handleCardClick(location)}>
           <Card key={location.id} title={location.title}  />
           </button>
       ))}
