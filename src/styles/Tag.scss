@@ -1,7 +1,7 @@
 @use "variables";
 
 .Tag{
-    width: 115px;
+    padding: 0 10px;
     height: 25px;
     background-color: variables.$primary-color;
     display: flex;
@@ -13,5 +13,6 @@
     .Tag__text{
         color: white;
         font-size: variables.$small-font-size;
+        white-space: nowrap;
     }
 }

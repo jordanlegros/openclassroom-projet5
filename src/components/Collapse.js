@@ -41,7 +41,7 @@ const Collapse = (props) => {
         <div className="Collapse">
             <div className="Collapse__HeadBar">
                 <div className="Collapse__HeadBar--title">{props.title}</div>
-                <button className="Collapse__HeadBar--button" onClick={toggle}>
+                <button className={`Collapse__HeadBar--button ${open ? 'rotated' : ''}`} onClick={toggle}>
                     <FontAwesomeIcon icon={faAngleDown} className="Collapse__HeadBar--icon" />
                 </button>
             </div>

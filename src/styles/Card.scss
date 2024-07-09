@@ -1,13 +1,14 @@
 @use 'variables';
 
 .Card {
-    width: 340px;
-    height: 340px;
+    width: 100%;
+    height: 100%;
     background: linear-gradient(180deg, #ff6060, #c74b4b);
     border-radius: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 
     .Card__Content {
         box-sizing: border-box;
@@ -17,26 +18,48 @@
         flex-direction: column;
         justify-content: end;
         padding: 40px 20px;
+        position: relative;
+        overflow: hidden;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.5));
+            z-index: 1; /* Place le dégradé en dessous du texte */
+            pointer-events: none; /* Permet de cliquer à travers le pseudo-élément */
+        }
 
         .Card__Title {
-            width: 300px;
+            width: 100%;
             color: white;
             font-weight: 700;
-            font-size: white;
+            font-size: 1vw;
+            z-index: 2;
+        }
+
+        .Card__Cover{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            object-fit: cover;
+            
         }
     }
 
     @media (max-width: 1024px) {
-        width: 300px;
-        height: 300px;
+      
 
         .Card__Content {
             padding: 30px 15px;
 
-            .Card__Title {
-                width: 280px;
-                font-size: 18px; // Ajustez la taille de la police si nécessaire
-            }
+            
         }
     }
 

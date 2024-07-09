@@ -8,7 +8,6 @@ const CardsContainer = () => {
   const navigate = useNavigate();
 
   const handleCardClick = (data) => {
-    console.log("click");
     navigate(`/card/${data.id}`, { state: { data } });
 
   };
@@ -18,7 +17,7 @@ const CardsContainer = () => {
     <div className="CardsContainer">
       {data.map((location) => (
         <button key={location.id} onClick={() => handleCardClick(location)}>
-          <Card key={location.id} title={location.title}  />
+          <Card key={location.id} title={location.title} cover={location.cover} />
           </button>
       ))}
     </div>
