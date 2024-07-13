@@ -25,7 +25,7 @@ const Collapse = (props) => {
             <div className="content">
                 {props.text.map((item, index) => (
                     <React.Fragment key={index}>
-                        {index > 0 && <br />} {/* Ajoute un <br> entre chaque élément sauf avant le premier */}
+                        {index > 0 && <br />} 
                         {item}
                     </React.Fragment>
                 ))}

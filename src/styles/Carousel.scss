@@ -55,14 +55,14 @@
 
     .Carousel__counter {
       position: absolute;
-      top: 90%; /* Ajuste la position verticale si nécessaire */
+      top: 90%; 
       left: 50%;
       transform: translateX(-50%);
       color: white;
       padding: 5px 10px;
       border-radius: 5px;
-      font-size: 1em; /* Ajuste la taille de la police si nécessaire */
-      z-index: 2; /* Assure que le compteur est au-dessus des slides */
+      font-size: 1em; 
+      z-index: 2; 
     }
 
     @media (max-width: 1024px) {

@@ -23,7 +23,7 @@ const CardPage = () => {
   }
 
   const data = location.state.data;
-  const tags = data.tags || []; // Assurez-vous que tags est un tableau ou initialisez-le à un tableau vide
+  const tags = data.tags || []; 
 
   return (
     <div className="CardPage">
