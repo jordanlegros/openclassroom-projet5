@@ -1,24 +1,21 @@
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import React from "react";
 import Card from "./Card";
 import "../styles/CardsContainer.scss";
-import data from "../assets/backend/donnees.json"; 
+import data from "../assets/backend/donnees.json";
 
 const CardsContainer = () => {
-  const navigate = useNavigate();
-
-  const handleCardClick = (data) => {
-    navigate(`/card/${data.id}`, { state: { data } });
-
-  };
-
 
   return (
     <div className="CardsContainer">
       {data.map((location) => (
-        <button key={location.id} onClick={() => handleCardClick(location)}>
-          <Card key={location.id} title={location.title} cover={location.cover} />
-          </button>
+        <div className="CardsContainer__Card" key={location.id}>
+        
+          <Link key={location.id} to={`/card/${location.id}`} style={{ textDecoration: 'none' }}>
+            <Card key={location.id} title={location.title} cover={location.cover}  className="CardsContainer__CardLink"/>
+          </Link>
+
+        </div>
       ))}
     </div>
   );

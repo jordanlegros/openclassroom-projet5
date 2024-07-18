@@ -33,9 +33,7 @@ const APropos = () =>{
             <img src={Banner} alt="Paysage composé de lacs et montagnes" className="APropos__Banner"/>
             <div className="APropos__CollapseContainer">
                 {collapses.map((collapse,index) => (
-                    <Collapse key={index} title={collapse.title} text={collapse.text}>
-                        <p>{collapse.text}</p>
-                    </Collapse>
+                    <Collapse key={index} title={collapse.title} content={collapse.text} />
                 ))}
             </div>
         </div>

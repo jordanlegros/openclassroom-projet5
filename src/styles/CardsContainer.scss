@@ -15,7 +15,7 @@
     
     
 
-    button{
+    .CardsContainer__Card{
         background: none;
         border: none;
         width: 100%;
@@ -25,12 +25,14 @@
         padding: 0;
     }
 
+   
+
     @media (max-width: 1024px) {
        
     }
 
     @media (max-width: 768px) {
-        button{
+        .CardsContainer__Card{
             width: 100%;
            
         }

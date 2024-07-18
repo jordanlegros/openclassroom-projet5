@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import styles from "../styles/Carousel.scss";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const Carousel = ({ children }) => {
+const Carousel = ({ props}) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Vérification si children est vide
-  if (!children || React.Children.count(children) === 0) {
+  // Vérification si props est vide
+  if (!props || React.Children.count(props) === 0) {
     return (
       <div className="Carousel__error">
         Erreur lors du chargement des images
@@ -15,19 +15,19 @@ const Carousel = ({ children }) => {
   }
 
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % React.Children.count(children));
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % React.Children.count(props));
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + React.Children.count(children)) % React.Children.count(children));
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + React.Children.count(props)) % React.Children.count(props));
   };
 
-  const childrenCount = React.Children.count(children);
+  const childrenCount = React.Children.count(props);
 
   return (
     <div className='Carousel'>
       <div className="Carousel__wrapper">
-        {React.Children.map(children, (child, index) => (
+        {React.Children.map(props, (child, index) => (
           <div className="Carousel__slide" style={{ display: index === currentIndex ? 'block' : 'none' }}>
             <img src={child} alt={`Slide ${index + 1}`} />
           </div>
